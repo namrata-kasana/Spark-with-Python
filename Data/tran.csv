@@ -1,0 +1,7 @@
+transaction_id,customer_id,transaction_amoun,transaction_type
+100,1,10000,credit
+101,1,20000,debit
+102,1,5000,debit
+103,1,10000,credit
+104,2,6000,credit
+105,3,4000,debit

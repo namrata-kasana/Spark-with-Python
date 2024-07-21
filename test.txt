@@ -1,0 +1,19 @@
+OrderID	Date	CustomerID	ProductID	Quantity	OrderStatus
+101	01/01/24	1001	2001	2	Shipped
+102	02/01/24	1002	2002	1	Pending
+103	03/01/24	1003	2003	3	Delivered
+104	04/01/24	1001	2004	5	Cancelled
+105	05/01/24	1004	2001	2	Shipped
+106	06/01/24	1002	2002	4	Pending
+107	07/01/24	1003	2003	6	Delivered
+108	08/01/24	1004	2004	8	Shipped
+109	09/01/24	1001	2001	10	Pending
+110	10/01/24	1003	2002	7	Delivered
+
+select sum(quantity) as total from sales  group by ProductID having total > 10
+#List all products that have never been shipped
+
+select * from orders where ordres not in (select orderid from orders a inner outer join sales b on a.productid = b.productid wheer a.order_status = 'shipped')
+
+select oredid from orders where order_status = 'notshipped'
+
